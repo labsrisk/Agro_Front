@@ -1,0 +1,25 @@
+---
+title: "Dynamic report"
+output: 
+   prettydoc::html_pretty:
+      theme: leonids
+params:
+  n: NA
+---
+
+```{r}
+# The `params` object is available in the document.
+params$n
+```
+
+A plot of `params$n` random points.
+
+```{r}
+ggplot(data = params$n, aes(x = Valores)) + geom_histogram()
+```
+
+
+
+
+
+

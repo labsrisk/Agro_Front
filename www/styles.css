@@ -1,0 +1,145 @@
+/* Alterando a formatação do texto de todo o documento */
+* {
+ font-size: 100%;
+ color: black;
+}
+
+/* Controla uma parte específica da nav que estava com outra cor */
+body > div > nav > div{
+    background-color: #FFFFFF;
+}
+ 
+.nav {
+	background-color: #FFFFFF;
+	-webkit-transition: padding .3s;
+	-moz-transition: padding .3s;
+	transition: padding .3s;
+	border: none;
+}
+
+/* Parte da Navbar onde ficam as TabPanel */
+.navbar .navbar-nav {
+	float: right;
+	padding-right: 100px;
+	padding-top: 25px;
+}
+
+/* Parte da Navbar onde ficam os links das Tabpanel */
+.navbar-default .navbar-nav>li>a {
+  	font-size: 17px;
+	color: #000000;
+    	text-transform: uppercase;
+    	position: relative;
+    	display: block;
+}
+
+/* Controla a TabPanel que estiver ativa */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #FFFFFF;
+    background-color: #39B54A;
+}
+
+/* Controla alteração de estilo quando passamos o mouse em cima de um elemento da lista de TabPanel */
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+/* Controla alteração de Estilo ao passar o mouse em cima de um link no documento */
+a:focus, a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Controla a caixa vonorys do documento */
+.voronoys-block {
+    position: relative;
+    display: table;
+    width: 310px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    transition: box-shadow .4s;
+}
+
+/* Controla o texto_span dentro da caixa vonorys */
+.voronoys-block span.name {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 15.2em;
+    letter-spacing: 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+    word-break: normal;
+    color: #FFFFFF;
+}
+
+/* Controla o bloco de imagem dentro da caixa vonorys */
+.img_block_conteiner{
+   float: right;
+}
+
+/* Controla imagem dentro da caixa vonorys */
+.img_block_conteiner img {
+   height: 30px;
+   position: absolute;
+   right: 10px;
+   bottom: 10px;
+   -webkit-filter: invert(100%);
+}
+
+/* Controlando o padding de todo classe conteudo fluido do documento */
+.container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Controla os wellpanel */
+.well {
+    background-color: #39B54A;
+    border-radius: 50px;
+    padding: 8px;
+    border: none;	
+}
+
+/* Controla as réguas horizontais que aparecem no documento. */
+hr {
+    margin-top: 0px;
+    border-top: 2px solid #000000;
+}
+
+.footer {
+    margin-top: 10px;	
+    text-align: center;
+}
+
+
+/* Controla os botões padrões */
+.btn-default {
+    border-color: black;
+    font-weight: 800;
+    border-radius: 20px;
+}
+
+/* Controla as células das tabelas */
+td, th { 	
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Controla o cabeçalho da tabela */
+thead {
+    background-color: #39B54A;
+}
+
+/* Controla as tabelas */
+table {
+    margin-top: 0px;
+}
+
+/* Controla os captions das tabelas*/
+table caption {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+}
+
