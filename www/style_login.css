@@ -1,0 +1,12 @@
+/* Alterando a pagina de log-in */
+
+.panel-auth {
+ background-color: #2FA4E7;
+ overflow-x: hidden;
+ overflow-y: hidden;
+}
+
+/* Alterando a caixa de log-in */
+.panel-auth .panel-body {
+ 
+}

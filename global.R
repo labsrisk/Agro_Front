@@ -1,3 +1,4 @@
+library(package = shinymanager)
 library(package = shiny)
 library(package = dplyr)
 library(package = dbplyr)
@@ -21,18 +22,25 @@ library(package = waiter)
 library(package = shinyjs) 
 library(package = openxlsx)
 library(package = prettydoc)
+library(package = shinythemes)
 
 #Carregando Alguns Objetos Globais
-F_Motor_Quant_Riscos <- readRDS(file = "C:/Users/wesleysilva/Desktop/Funções/F_Motor_Quant_Riscos")
-EV_Total <- readRDS(file = "C:/Users/wesleysilva/Desktop/Funções/EV_Total")
-Funcao_H1 <- readRDS(file = "C:/Users/wesleysilva/Desktop/Funções/Funcao_H1.rds")
+F_Motor_Quant_Riscos <- readRDS(file = "C:/Users/wesleysilva/Desktop/Funções/F_Motor_Quant_Riscos.rds")
+EV_Total <- readRDS(file = "C:/Users/wesleysilva/Desktop/Funções/EV_Total.rds")
 Paragrafo_HTML <- readRDS(file = "C:/Users/wesleysilva/Desktop/Funções/Paragrafo_HTML.rds")
 
-home <- readRDS(file = "C:/Users/wesleysilva/Desktop/Identificação/tabs/ui/home.rds")
-Identificacao <- readRDS(file = "C:/Users/wesleysilva/Desktop/Identificação/tabs/ui/Identificacao.rds")
-Apoio <- readRDS(file = "C:/Users/wesleysilva/Desktop/Identificação/tabs/ui/Apoio.rds")
+load(file = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/Teste.RData")
+Corte_Escolhido <- 3
+Densidade <- density(x = subset(x = Tabela, Corte == Corte_Escolhido)$PR_SIM)
+Dados <- data.frame(Valor = Densidade$x, Dens = Densidade$y)
 
-Template <- read_xlsx(path = "C:/Users/wesleysilva/Desktop/Identificação/Template.xlsx")
-Template_2 <- read_xlsx(path = "C:/Users/wesleysilva/Desktop/Identificação/Template.xlsx", sheet = 2)
+home <- readRDS(file = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/tabs/ui/home.rds")
+Ferramenta <- readRDS(file = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/tabs/ui/Ferramenta.rds")
+Apoio <- readRDS(file = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/tabs/ui/Apoio.rds")
+
+Template <- read_xlsx(path = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/Template.xlsx")
+Template_2 <- read_xlsx(path = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/Template.xlsx", sheet = 2)
 Lista <- list("Registro" = Template, "Sumario" = Template_2)
-Exemplo <- read_xlsx(path = "C:/Users/wesleysilva/Desktop/Identificação/Exemplo.xlsx")
+Exemplo <- read_xlsx(path = "C:/Users/wesleysilva/Desktop/Projetos_Github/Agro_Front/Exemplo.xlsx")
+
+Credenciais <- data.frame("user" = c("marcio"), "password" = c("teste2460"), stringsAsFactors = FALSE)

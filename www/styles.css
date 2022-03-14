@@ -4,13 +4,20 @@
  color: black;
 }
 
+/* Alterando todos os H1 */
+h1{
+ font-size: 30px;
+ text-align: center;
+ font-weight: bold; 
+}
+
 /* Controla uma parte específica da nav que estava com outra cor */
 body > div > nav > div{
-    background-color: #FFFFFF;
+    background-color:  #E1E1E1;
 }
  
 .nav {
-	background-color: #FFFFFF;
+	background-color:  #E1E1E1;
 	-webkit-transition: padding .3s;
 	-moz-transition: padding .3s;
 	transition: padding .3s;
@@ -20,8 +27,8 @@ body > div > nav > div{
 /* Parte da Navbar onde ficam as TabPanel */
 .navbar .navbar-nav {
 	float: right;
-	padding-right: 100px;
-	padding-top: 25px;
+	padding-right: 5%;
+	padding-top: 3%;
 }
 
 /* Parte da Navbar onde ficam os links das Tabpanel */
@@ -31,6 +38,8 @@ body > div > nav > div{
     	text-transform: uppercase;
     	position: relative;
     	display: block;
+        padding-top: 20px;
+        padding-bottom: 20px;
 }
 
 /* Controla a TabPanel que estiver ativa */
@@ -54,9 +63,8 @@ a:focus, a:hover {
 .voronoys-block {
     position: relative;
     display: table;
-    width: 310px;
-    margin-bottom: 10px;
-    border-radius: 20px;
+    width: 70%;
+    border-radius: 10%;
     transition: box-shadow .4s;
 }
 
@@ -99,6 +107,14 @@ a:focus, a:hover {
     border-radius: 50px;
     padding: 8px;
     border: none;	
+}
+
+/* Controlando os well que estão dentro de um sidebarpanel */
+.col-sm-4 .well { 	
+    background-color: #39B54A;
+    border-radius: 0px;
+    padding: 8px;
+    border: none;
 }
 
 /* Controla as réguas horizontais que aparecem no documento. */

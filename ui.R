@@ -1,11 +1,7 @@
-ui <- shinyUI(ui = fluidPage( 
+ui <- shinyUI(
+  ui = secure_app(ui = fluidPage( 
   #Passando Para O Header Algumas Intruções 'Globais' Para o HTML
-  tags$head(tags$link(rel = "stylesheet", type  = "text/css", 
-                      href = "https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro"),
-            tags$link(rel="stylesheet", type = "text/css",
-                      href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"),
-            tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")
-  ),
+  tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "styles.css")),
   #Logo Da Empresa Que Irá Aparecer Na Barra Do Navegador
   list(tags$head(HTML('<link rel="icon", href ="img/logo.png",
                       type = "image/png" />'))),
@@ -21,13 +17,13 @@ ui <- shinyUI(ui = fluidPage(
              id = "navbar",
              selected = "home", 
              fluid = TRUE,
-             collapsible = FALSE,
+             collapsible = TRUE,
              home,
-             Identificacao,
-             Apoio,
+             Ferramenta,
+             Apoio
              
   ),
   
   #Footer
   div(class = "footer", includeHTML(path = "html/footer.html"))
-)) 
+), tags_top = tags$head(tags$link(rel = "stylesheet", type = "text/css", href = "style_login.css")), language = "pt-BR", theme = shinytheme(theme = "cerulean"))) 
